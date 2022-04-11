@@ -33,3 +33,12 @@ html.dark *::-webkit-scrollbar-thumb {
 html.dark * {
   scrollbar-color: theme("colors.slate.400") theme("colors.slate.600");
 }
+
+.profile-img {
+  border-style: outset;
+  border-color: #d2d2d2;
+}
+
+.profile-img:hover {
+  border-style: inset;
+}
