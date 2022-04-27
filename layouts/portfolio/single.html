@@ -18,7 +18,7 @@
 
     {{ with .Params.images }}
       {{- range first 1 . }}
-        <img class="rounded max-w-full w-full mb-4" src="{{ . }}" alt="{{ $title }}" />
+        <img class="rounded-md aspect-video max-w-full w-full mb-4" src="{{ . }}" alt="{{ $title }}" />
       {{ end -}}
     {{ end }}
 
