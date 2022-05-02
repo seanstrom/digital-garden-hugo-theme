@@ -35,10 +35,10 @@ html.dark * {
 }
 
 .profile-img {
-  border-style: outset;
+  border-style: solid;
   border-color: #d2d2d2;
 }
 
 .profile-img:hover {
-  border-style: inset;
+  border-color: #8c8c8c;
 }
