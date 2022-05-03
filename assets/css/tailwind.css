@@ -42,3 +42,21 @@ html.dark * {
 .profile-img:hover {
   border-color: #8c8c8c;
 }
+
+.sidebar {
+  @apply border-r px-3 z-20 min-h-screen;
+  @apply absolute top-0 left-0 bottom-0 w-3/4;
+  @apply flex flex-col gap-2.5 justify-between;
+  @apply bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700;
+  @apply will-change-transform transform transition-transform -translate-x-full;
+}
+
+@screen md {
+  .sidebar {
+    @apply relative translate-x-0 w-60;
+  }
+}
+
+.site-container {
+  @apply flex-1 overflow-y-auto;
+}
