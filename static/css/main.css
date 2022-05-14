@@ -1102,6 +1102,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   pointer-events: auto;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .fixed {
   position: fixed;
 }
@@ -1197,6 +1201,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.5rem;
 }
 
+.mb-\[0\.5px\] {
+  margin-bottom: 0.5px;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -1219,10 +1227,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ml-2 {
   margin-left: 0.5rem;
-}
-
-.mb-\[0\.5px\] {
-  margin-bottom: 0.5px;
 }
 
 .block {
