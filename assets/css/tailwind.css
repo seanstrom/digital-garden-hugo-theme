@@ -36,11 +36,11 @@ html.dark * {
 
 .profile-img {
   border-style: solid;
-  border-color: #d2d2d2;
+  border-color: #dfdfe1;
 }
 
 .profile-img:hover {
-  border-color: #8c8c8c;
+  border-color: #d2d2d2;
 }
 
 .sidebar {
