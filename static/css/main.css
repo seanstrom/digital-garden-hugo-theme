@@ -1443,9 +1443,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 1px;
 }
 
-.border-y-\[1rem\] {
-  border-top-width: 1rem;
-  border-bottom-width: 1rem;
+.border-y-\[0\.4rem\] {
+  border-top-width: 0.4rem;
+  border-bottom-width: 0.4rem;
 }
 
 .border-r {
