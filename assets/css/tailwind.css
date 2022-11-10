@@ -37,10 +37,12 @@ html.dark * {
 .profile-img {
   border-style: solid;
   border-color: #dfdfe1;
+  border-color: #cbcbe6;
 }
 
 .profile-img:hover {
   border-color: #d2d2d2;
+  border-color: #d1d9fa;
 }
 
 .sidebar {
@@ -59,4 +61,11 @@ html.dark * {
 
 .site-container {
   @apply flex-1 overflow-y-auto;
+}
+
+.image-container {
+  background-image: url("/images/pastel.png");
+  background-position: 50% 16%;
+  background-size: 66%;
+  background-repeat: no-repeat;
 }
