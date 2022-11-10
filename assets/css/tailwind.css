@@ -65,8 +65,9 @@ html.dark * {
 
 .image-container {
   background-image: url("/images/pastel.png");
-  background-position: 50% 16%;
-  background-size: 66%;
+  background-position: 50% 50%;
+  background-size: 68%;
   background-repeat: no-repeat;
-  overflow: overlay;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
