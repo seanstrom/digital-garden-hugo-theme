@@ -38,6 +38,8 @@ html.dark * {
   border-style: solid;
   border-color: #dfdfe1;
   border-color: #cbcbe6;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .profile-img:hover {
