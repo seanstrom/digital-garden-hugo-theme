@@ -68,4 +68,5 @@ html.dark * {
   background-position: 50% 16%;
   background-size: 66%;
   background-repeat: no-repeat;
+  overflow: overlay;
 }
