@@ -3,7 +3,31 @@
 @tailwind utilities;
 
 body {
-  @apply text-slate-900 dark:bg-slate-900 dark:text-slate-50 dark:selection:bg-slate-600;
+  @apply bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-50 dark:selection:bg-slate-600;
+  font-family: 'Short Stack';
+}
+
+article h1 {
+  font-family: 'Caveat Brush';
+}
+
+aside {
+  font-size: 1.4rem;
+  font-family: 'Caveat Brush';
+}
+
+main section h2 {
+  font-family: 'Caveat Brush';
+}
+
+main > section > h3 {
+  font-family: 'Nanum Pen Script', 'Noto Emoji';
+}
+
+aside ul li span {
+  font-size: 1.4em;
+  line-height: 1.25em;
+  font-family: 'Nanum Pen Script';
 }
 
 * {
@@ -51,7 +75,7 @@ html.dark * {
   @apply border-r px-3 z-20 min-h-screen;
   @apply absolute top-0 left-0 bottom-0 w-3/4;
   @apply flex flex-col gap-2.5 justify-between;
-  @apply bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700;
+  @apply bg-slate-50 dark:bg-slate-900 border-slate-200 dark:border-slate-700;
   @apply will-change-transform transform transition-transform -translate-x-full;
 }
 
@@ -72,4 +96,28 @@ html.dark * {
   background-repeat: no-repeat;
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+.main-header {
+  font-family: "Caveat Brush", "Noto Emoji";
+  /* font-family: 'Delius Unicase', "Noto Emoji"; */
+  /* font-family: 'Nanum Pen Script', "Noto Emoji"; */
+  /* font-family: 'Itim', "Noto Emoji"; */
+  /* font-family: 'Short Stack', "Noto Emoji"; */
+
+  /* font-family: 'Edu SA Beginner', "Noto Emoji"; */
+  /* font-family: 'Edu TAS Beginner', "Noto Emoji"; */
+  /* font-family: 'Edu VIC WA NT Beginner', "Noto Emoji"; */
+}
+
+.main-subheader {
+  font-family: "Caveat Brush", "Noto Emoji";
+  /* font-family: 'Delius Unicase', "Noto Emoji"; */
+  font-family: 'Nanum Pen Script', "Noto Emoji";
+  /* font-family: 'Itim', "Noto Emoji"; */
+  /* font-family: 'Short Stack', "Noto Emoji"; */
+
+  /* font-family: 'Edu SA Beginner', "Noto Emoji"; */
+  /* font-family: 'Edu TAS Beginner', "Noto Emoji"; */
+  /* font-family: 'Edu VIC WA NT Beginner', "Noto Emoji"; */
 }
