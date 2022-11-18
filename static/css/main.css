@@ -1353,6 +1353,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
 .flex-row-reverse {
   flex-direction: row-reverse;
 }
@@ -1930,12 +1938,25 @@ html.dark * {
   scrollbar-color: #94a3b8 #475569;
 }
 
+html.dark .image-container {
+  background-color: #0f172a;
+  background-blend-mode: color-dodge;
+}
+
 .profile-img {
   border-style: solid;
   border-color: #dfdfe1;
   border-color: #cbcbe6;
   margin-bottom: 0;
   margin-top: 0;
+}
+
+html.dark .profile-img {
+  border-color: #689cd0;
+}
+
+html.dark .profile-img:hover {
+  border-color: #76b3f0;
 }
 
 .profile-img:hover {
