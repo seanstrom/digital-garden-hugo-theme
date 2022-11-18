@@ -1353,10 +1353,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
 .grid-rows-2 {
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }
@@ -1856,7 +1852,7 @@ body {
 }
 
 body {
-  font-family: 'Short Stack';
+  font-family: 'Short Stack', system-ui;
   -webkit-animation: fadeIn 0.667s;
           animation: fadeIn 0.667s;
 }
@@ -1882,26 +1878,26 @@ body {
 }
 
 article h1 {
-  font-family: 'Caveat Brush';
+  font-family: "Caveat Brush", "Noto Emoji";
 }
 
 aside {
   font-size: 1.4rem;
-  font-family: 'Caveat Brush';
+  font-family: "Caveat Brush", "Noto Emoji", system-ui;
 }
 
 main section h2 {
-  font-family: 'Caveat Brush';
+  font-family: "Caveat Brush", "Noto Emoji", system-ui;
 }
 
 main > section > h3 {
-  font-family: 'Nanum Pen Script', 'Noto Emoji';
+  font-family: 'Nanum Pen Script', 'Noto Emoji', Courier;
 }
 
 aside ul li span {
   font-size: 1.4em;
   line-height: 1.25em;
-  font-family: 'Nanum Pen Script';
+  font-family: 'Nanum Pen Script', 'Noto Emoji', Courier;
 }
 
 * {
@@ -2031,11 +2027,12 @@ html.dark .profile-img:hover {
 }
 
 .main-header {
-  font-family: "Caveat Brush", "Noto Emoji", "ui-san-serif";
+  font-family: "Caveat Brush", "Noto Emoji";
+  font-family: inherit;
 }
 
 .main-subheader {
-  font-family: 'Nanum Pen Script', "Noto Emoji", "ui-serif";
+  font-family: 'Nanum Pen Script', "Noto Emoji", Courier;
 }
 
 .hover\:bg-slate-200:hover {

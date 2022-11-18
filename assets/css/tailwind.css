@@ -4,7 +4,7 @@
 
 body {
   @apply bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-50 dark:selection:bg-slate-600;
-  font-family: 'Short Stack';
+  font-family: 'Short Stack', system-ui;
 }
 
 body {
@@ -17,26 +17,26 @@ body {
 }
 
 article h1 {
-  font-family: 'Caveat Brush';
+  font-family: "Caveat Brush", "Noto Emoji";
 }
 
 aside {
   font-size: 1.4rem;
-  font-family: 'Caveat Brush';
+  font-family: "Caveat Brush", "Noto Emoji", system-ui;
 }
 
 main section h2 {
-  font-family: 'Caveat Brush';
+  font-family: "Caveat Brush", "Noto Emoji", system-ui;
 }
 
 main > section > h3 {
-  font-family: 'Nanum Pen Script', 'Noto Emoji';
+  font-family: 'Nanum Pen Script', 'Noto Emoji', Courier;
 }
 
 aside ul li span {
   font-size: 1.4em;
   line-height: 1.25em;
-  font-family: 'Nanum Pen Script';
+  font-family: 'Nanum Pen Script', 'Noto Emoji', Courier;
 }
 
 * {
@@ -121,9 +121,10 @@ html.dark .profile-img:hover {
 }
 
 .main-header {
-  font-family: "Caveat Brush", "Noto Emoji", "ui-san-serif";
+  font-family: "Caveat Brush", "Noto Emoji";
+  font-family: inherit;
 }
 
 .main-subheader {
-  font-family: 'Nanum Pen Script', "Noto Emoji", "ui-serif";
+  font-family: 'Nanum Pen Script', "Noto Emoji", Courier;
 }
