@@ -17,7 +17,7 @@ body {
 }
 
 article h1 {
-  font-family: "Caveat Brush", "Noto Emoji";
+  font-family: "Caveat Brush", "Noto Emoji", system-ui;
 }
 
 aside {
@@ -121,8 +121,7 @@ html.dark .profile-img:hover {
 }
 
 .main-header {
-  font-family: "Caveat Brush", "Noto Emoji";
-  font-family: inherit;
+  font-family: "Caveat Brush", "Noto Emoji", system-ui;
 }
 
 .main-subheader {
