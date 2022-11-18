@@ -1849,6 +1849,28 @@ body {
 
 body {
   font-family: 'Short Stack';
+  -webkit-animation: fadeIn 0.667s;
+          animation: fadeIn 0.667s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 article h1 {
@@ -1988,25 +2010,11 @@ html.dark * {
 }
 
 .main-header {
-  font-family: "Caveat Brush", "Noto Emoji";
-  /* font-family: 'Delius Unicase', "Noto Emoji"; */
-  /* font-family: 'Nanum Pen Script', "Noto Emoji"; */
-  /* font-family: 'Itim', "Noto Emoji"; */
-  /* font-family: 'Short Stack', "Noto Emoji"; */
-  /* font-family: 'Edu SA Beginner', "Noto Emoji"; */
-  /* font-family: 'Edu TAS Beginner', "Noto Emoji"; */
-  /* font-family: 'Edu VIC WA NT Beginner', "Noto Emoji"; */
+  font-family: "Caveat Brush", "Noto Emoji", "ui-san-serif";
 }
 
 .main-subheader {
-  font-family: "Caveat Brush", "Noto Emoji";
-  /* font-family: 'Delius Unicase', "Noto Emoji"; */
-  font-family: 'Nanum Pen Script', "Noto Emoji";
-  /* font-family: 'Itim', "Noto Emoji"; */
-  /* font-family: 'Short Stack', "Noto Emoji"; */
-  /* font-family: 'Edu SA Beginner', "Noto Emoji"; */
-  /* font-family: 'Edu TAS Beginner', "Noto Emoji"; */
-  /* font-family: 'Edu VIC WA NT Beginner', "Noto Emoji"; */
+  font-family: 'Nanum Pen Script', "Noto Emoji", "ui-serif";
 }
 
 .hover\:bg-slate-200:hover {
