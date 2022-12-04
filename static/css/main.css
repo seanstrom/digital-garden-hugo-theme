@@ -1197,8 +1197,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.5rem;
 }
 
-.mb-\[0\.5px\] {
-  margin-bottom: 0.5px;
+.mb-\[0\.2rem\] {
+  margin-bottom: 0.2rem;
 }
 
 .mb-2 {
@@ -1353,12 +1353,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
-.grid-rows-2 {
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-}
-
 .grid-rows-1 {
   grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row-reverse {
@@ -1500,6 +1500,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-slate-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#EBEDF0\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 237 240 / var(--tw-bg-opacity));
 }
 
 .bg-slate-700 {
@@ -1976,8 +1981,8 @@ html.dark .profile-img:hover {
   z-index: 20;
   min-height: 100vh;
   border-right-width: 1px;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -2049,6 +2054,11 @@ html.dark .profile-img:hover {
 .hover\:bg-slate-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#E8EAEC\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(232 234 236 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-slate-100:hover {
@@ -2130,9 +2140,14 @@ html.dark .profile-img:hover {
   background-color: rgb(248 250 252 / var(--tw-bg-opacity));
 }
 
-.dark .dark\:bg-\[\#283346\] {
+.dark .dark\:bg-\[\#F8FAFC\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(40 51 70 / var(--tw-bg-opacity));
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-\[\#1C263B\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(28 38 59 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:text-slate-400 {
@@ -2198,6 +2213,11 @@ html.dark .profile-img:hover {
 .dark .dark\:hover\:bg-slate-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(51 65 85 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:hover\:bg-\[\#202A3E\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 42 62 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:hover\:text-slate-400:hover {

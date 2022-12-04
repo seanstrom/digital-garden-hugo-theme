@@ -19,14 +19,14 @@
     {{ $permalink := cond (eq (len .RelPermalink) 1) .RelPermalink (strings.TrimRight "/" .RelPermalink) }}
     <ul class="navigation list-none flex flex-col gap-0.5 rounded-md">
       {{ range .Site.Menus.main }}
-      <li class="mb-[0.5px]">
-        <a class="px-2 py-1.5 rounded text-sm flex items-center justify-between {{ if eq .URL $permalink }} bg-slate-800 text-white dark:bg-slate-50 dark:text-slate-800 dark:selection:bg-slate-400 {{ else }} hover:bg-slate-200 dark:hover:bg-slate-700 bg-slate-100 dark:bg-[#283346] {{ end }}"
+      <li class="mb-[0.2rem]">
+        <a class="px-2 py-1.5 rounded text-sm flex items-center justify-between {{ if eq .URL $permalink }} bg-slate-800 text-white dark:bg-[#F8FAFC] dark:text-slate-800 dark:selection:bg-slate-400 {{ else }} hover:bg-slate-200 hover:bg-[#E8EAEC] dark:hover:bg-slate-700 bg-slate-100 bg-[#EBEDF0] dark:hover:bg-[#202A3E] dark:bg-[#1C263B] {{ end }}"
           href="{{ .URL }}" {{ if strings.HasPrefix .URL "http" }} target="_blank" rel="noopener" {{ end }}>
           <span>{{ .Name }}</span>
           {{ if strings.HasPrefix .URL "http" }}
-          <span>
-            {{- partial "icon/externalIcon.html" . -}}
-          </span>
+            <span>
+              {{- partial "icon/externalIcon.html" . -}}
+            </span>
           {{ end }}
         </a>
       </li>
@@ -38,7 +38,7 @@
   {{- partial "newsletter-widget.html" . -}} 
   {{ end }}
 
-  <ul class="list-none flex flex-wrap justify-center gap-1 pt-2 pb-3 sticky bottom-0 border-t border-slate-200 dark:border-slate-600">
+  <ul class="list-none flex flex-wrap justify-center gap-1 pt-2 pb-3 sticky bottom-0 border-t border-slate-200 dark:border-slate-700">
     {{ range .Site.Menus.social }}
     <li>
       <a class="px-2 py-1.5 rounded-md text-sm block text-slate-800 dark:text-slate-50 {{ if eq (.URL|absURL) $permalink }} bg-slate-800 text-white dark: {{ else }} hover:bg-slate-200 dark:hover:bg-slate-700 {{ end }}"
@@ -75,6 +75,6 @@
 
 <button
   aria-label="Toggle Sidebar"
-  class="md:hidden absolute top-3 left-3 z-10 menu-trigger p-1 rounded text-slate-800 dark:text-slate-50 hover:bg-slate-100">
+  class="md:hidden absolute top-3 left-3 z-10 menu-trigger p-1 rounded text-slate-800 dark:text-slate-50 hover:bg-slate-200 dark:hover:bg-slate-700">
   {{- partial "icon/menuIcon.html" . -}}
 </button>
