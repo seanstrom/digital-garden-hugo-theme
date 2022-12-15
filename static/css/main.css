@@ -2055,6 +2055,10 @@ html.dark .profile-img:hover {
   font-family: 'Nanum Pen Script', "Noto Emoji", Courier;
 }
 
+.resume .main-subheader {
+  margin-top: 2rem;
+}
+
 .resume .main-subheader + section > hr:first-of-type {
   margin-top: 0;
 }
