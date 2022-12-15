@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+{{ $permalink := .RelPermalink }}
+{{$Section := .Site.GetPage "section" .Section }}
+
+<div class="site-container flex relative">
+  
+  <article class="px-6 py-20 w-full mx-auto prose lg:prose-lg dark:prose-invert h-fit prose-img:mx-auto">
+    
+    {{ $title := .Params.title }}
+    <h1 class="main-header px-2 text-5xl font-medium !mb-2">{{ $title }}</h1>
+
+    {{ $desc := .Params.description }}
+    <h2 class="main-subheader px-2 text-2xl font-medium !leading-tight content-center">{{ $desc }}</h2>
+
+    {{ with .Params.images }}
+      {{- range first 1 . }}
+        <img class="rounded-md aspect-video max-w-full w-full mb-4" src="{{ . }}" alt="{{ $title }}" />
+      {{ end -}}
+    {{ end }}
+
+    <section class="px-2">
+      {{ .Content }}
+    </section>
+
+  </article>
+
+</div>
+
+{{ end }}
