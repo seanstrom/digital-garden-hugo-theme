@@ -2059,12 +2059,17 @@ html.dark .profile-img:hover {
   margin-top: 2rem;
 }
 
-.resume .main-subheader + section > hr:first-of-type {
-  margin-top: 0;
-}
-
 .prose strong a {
   font-weight: 700;
+}
+
+hr.top-divider {
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.bottom-divider {
+  margin-top: 2rem;
 }
 
 .hover\:bg-slate-200:hover {
