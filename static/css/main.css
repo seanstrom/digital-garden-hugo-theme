@@ -1169,6 +1169,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.25rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .\!mb-8 {
   margin-bottom: 2rem !important;
 }
@@ -1223,18 +1227,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .ml-2 {
   margin-left: 0.5rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
-.mt-8 {
-  margin-top: 2rem;
 }
 
 .block {
@@ -2061,6 +2053,10 @@ html.dark .profile-img:hover {
 
 .main-subheader {
   font-family: 'Nanum Pen Script', "Noto Emoji", Courier;
+}
+
+.main-subheader + * > hr {
+  margin-top: 0;
 }
 
 .prose strong a {
