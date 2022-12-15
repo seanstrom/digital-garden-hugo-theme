@@ -2063,13 +2063,14 @@ html.dark .profile-img:hover {
   font-weight: 700;
 }
 
-hr.top-divider {
-  margin-top: 3.5rem;
+.top-divider {
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .bottom-divider {
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .hover\:bg-slate-200:hover {
