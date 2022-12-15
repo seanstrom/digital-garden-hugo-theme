@@ -16,7 +16,7 @@ body {
   100% { opacity: 1; }
 }
 
-article h1 {
+article h1, article h2 {
   font-family: "Caveat Brush", "Noto Emoji", system-ui;
 }
 
@@ -126,4 +126,8 @@ html.dark .profile-img:hover {
 
 .main-subheader {
   font-family: 'Nanum Pen Script', "Noto Emoji", Courier;
+}
+
+.prose strong a {
+  font-weight: 700;
 }
