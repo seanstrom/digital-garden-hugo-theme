@@ -2088,6 +2088,21 @@ html.dark .profile-img:hover {
   background-repeat: no-repeat;
   padding-top: 2em;
   padding-bottom: 2em;
+  position: relative;
+}
+
+.image-container:before {
+  content: " ";
+  position: absolute;
+  visibility: hidden;
+  background-image: url("/images/pastel-darker.png");
+}
+
+.image-container:after {
+  content: " ";
+  position: absolute;
+  visibility: hidden;
+  background-image: url("/images/pastel.png");
 }
 
 .main-header {
@@ -2293,16 +2308,6 @@ html.dark .profile-img:hover {
 .dark .dark\:hover\:bg-zinc-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
-}
-
-.dark .dark\:hover\:bg-\[\#202A3E\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(32 42 62 / var(--tw-bg-opacity));
-}
-
-.dark .dark\:hover\:bg-zinc-800:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
 
 .dark .dark\:hover\:text-slate-400:hover {

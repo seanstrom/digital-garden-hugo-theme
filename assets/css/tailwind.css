@@ -158,6 +158,21 @@ html.dark .profile-img:hover {
   background-repeat: no-repeat;
   padding-top: 2em;
   padding-bottom: 2em;
+  position: relative;
+}
+
+.image-container:before {
+  content: " ";
+  position: absolute;
+  visibility: hidden;
+  background-image: url("/images/pastel-darker.png");
+}
+
+.image-container:after {
+  content: " ";
+  position: absolute;
+  visibility: hidden;
+  background-image: url("/images/pastel.png");
 }
 
 .main-header {
