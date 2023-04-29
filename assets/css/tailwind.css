@@ -72,8 +72,9 @@ html.dark * {
 }
 
 html.dark .image-container {
-  background-color: theme("colors.slate.900");
-  background-blend-mode: color-dodge;
+  /* background-color: theme("colors.slate.900"); */
+  /* background-blend-mode: color-dodge; */
+  background-image: url("/images/pastel-darker.png");
 }
 
 .profile-img {
