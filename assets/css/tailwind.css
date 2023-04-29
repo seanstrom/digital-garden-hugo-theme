@@ -205,3 +205,11 @@ html.dark .profile-img:hover {
   /* This is for aligning the menu open icon with the menu close icon */
   margin-top: 1px;
 }
+
+html .sidebar .navigation {
+  --tw-bg-opacity: 0.8;
+}
+
+html .sidebar .navigation li a {
+  --tw-bg-opacity: 0.8;
+}
