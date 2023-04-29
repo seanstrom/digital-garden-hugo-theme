@@ -128,6 +128,14 @@ html.dark .profile-img:hover {
   border-right-width: 3px;
 }
 
+.sidebar + .menu-overlay + .menu-trigger {
+  visibility: hidden;
+}
+
+.sidebar + .menu-overlay.hidden + .menu-trigger {
+  visibility: visible;
+}
+
 .dark .sidebar {
   --tw-bg-opacity: 0.8;
   --tw-border-opacity: 0.8;
@@ -176,4 +184,9 @@ html.dark .profile-img:hover {
 .bottom-divider {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.menu-trigger {
+  /* This is for aligning the menu open icon with the menu close icon */
+  margin-top: 1px;
 }
