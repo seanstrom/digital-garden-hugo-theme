@@ -1349,12 +1349,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-rows-1 {
@@ -2134,6 +2134,41 @@ html .sidebar .navigation {
 
 html .sidebar .navigation li a {
   --tw-bg-opacity: 0.8;
+}
+
+@media print {
+  html {
+    background-color: white!important;
+  }
+
+  #skills {
+    page-break-before: always;
+  }
+
+  .resume article,
+  .site-container > div.px-6 {
+    padding-left: 3rem!important;
+    padding-right: 3rem!important;
+  }
+
+  .sidebar,
+  .sidebar *,
+  .menu-trigger {
+    display: none!important;
+  }
+
+  .top-divider + ul > li,
+  .top-divider + ul > li + li {
+    display: none;
+  }
+
+  .top-divider + ul > li:last-child {
+    display: block;
+  }
+
+  .bottom-divider {
+    display: none;
+  }
 }
 
 .hover\:bg-slate-200:hover {
