@@ -2040,6 +2040,10 @@ html.dark .profile-img:hover {
   border-right-width: 3px;
 }
 
+.sidebar .social-links {
+  border-top-width: 2px;
+}
+
 .sidebar + .menu-overlay + .menu-trigger {
   visibility: hidden;
 }
@@ -2111,6 +2115,21 @@ html.dark .profile-img:hover {
 
 .prose strong a {
   font-weight: 700;
+}
+
+.top-divider, .bottom-divider {
+  --tw-border-opacity: 1;
+  border-color: rgb(226 232 240 / var(--tw-border-opacity));
+}
+
+.dark .top-divider, .dark .bottom-divider {
+  --tw-border-opacity: 1;
+  border-color: rgb(24 24 27 / var(--tw-border-opacity));
+}
+
+.top-divider,
+.bottom-divider {
+  border-top-width: 2px;
 }
 
 .top-divider {
@@ -2230,9 +2249,9 @@ html .sidebar .navigation li a {
   border-color: rgb(51 65 85 / var(--tw-border-opacity));
 }
 
-.dark .dark\:border-zinc-700 {
+.dark .dark\:border-zinc-900 {
   --tw-border-opacity: 1;
-  border-color: rgb(63 63 70 / var(--tw-border-opacity));
+  border-color: rgb(24 24 27 / var(--tw-border-opacity));
 }
 
 .dark .dark\:border-slate-600 {
