@@ -129,7 +129,7 @@ html.dark .profile-img:hover {
 }
 
 .sidebar .social-links {
-  border-top-width: 2px;
+  /* border-top-width: 2px; */
 }
 
 .sidebar + .menu-overlay + .menu-trigger {
