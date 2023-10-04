@@ -1134,8 +1134,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
 }
 
-.bottom-0 {
-  bottom: 0px;
+.bottom-\[0\.5rem\] {
+  bottom: 0.5rem;
 }
 
 .top-3 {
@@ -2151,7 +2151,8 @@ html .sidebar .navigation {
   --tw-bg-opacity: 0.8;
 }
 
-html .sidebar .navigation li a {
+html .sidebar .navigation li a,
+html .sidebar .social-links {
   --tw-bg-opacity: 0.8;
 }
 

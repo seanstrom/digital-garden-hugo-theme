@@ -220,7 +220,8 @@ html .sidebar .navigation {
   --tw-bg-opacity: 0.8;
 }
 
-html .sidebar .navigation li a {
+html .sidebar .navigation li a,
+html .sidebar .social-links {
   --tw-bg-opacity: 0.8;
 }
 

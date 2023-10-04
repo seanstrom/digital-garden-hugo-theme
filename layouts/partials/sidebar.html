@@ -52,7 +52,7 @@
   {{- partial "newsletter-widget.html" . -}} 
   {{ end }}
 
-  <ul class="social-links list-none flex flex-wrap justify-center gap-1 pt-2 pb-3 sticky bottom-0 border-t border-slate-200 dark:border-zinc-900">
+  <ul class="social-links list-none flex flex-wrap justify-center gap-1 pt-2 pb-3 sticky bg-[#EBEDF0] rounded-md bottom-[0.5rem] border-t border-slate-200 dark:border-zinc-900">
     {{ range .Site.Menus.social }}
     <li>
       <a class="px-2 py-1.5 rounded-md text-sm block text-slate-800 dark:text-slate-50 {{ if eq (.URL|absURL) $permalink }} bg-slate-800 text-white dark: {{ else }} hover:bg-slate-200 dark:hover:bg-zinc-700 {{ end }}"
