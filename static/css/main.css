@@ -1983,14 +1983,14 @@ html.dark .image-container {
   margin-top: 0;
   border: none;
   padding: 20px;
-  opacity: 0.7;
+  opacity: 0.9;
   filter: hue-rotate(0deg) drop-shadow(0px 5px 30px white) grayscale(20%) contrast(100%);
 }
 
 html.dark .profile-img {
   border-color: #689cd0;
-  filter: hue-rotate(60deg) drop-shadow(0px 5px 30px white) grayscale(60%) contrast(100%);
-  opacity: 0.6;
+  filter: hue-rotate(60deg) drop-shadow(0px 5px 30px white) grayscale(20%) contrast(100%);
+  opacity: 0.9;
 }
 
 html.dark .profile-img:hover {
@@ -2112,7 +2112,7 @@ html.dark .profile-img:hover {
 }
 
 .main-subheader {
-  font-family: 'Nanum Pen Script', "Noto Emoji", Courier;
+  font-family: "Caveat Brush", 'Nanum Pen Script', "Noto Emoji", Courier;
 }
 
 .resume .main-subheader {
