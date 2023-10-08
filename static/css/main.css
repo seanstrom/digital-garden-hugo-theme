@@ -1855,9 +1855,15 @@ html.dark body {
 }
 
 body {
+  --mono: "MONO" 0.5;
+  --casl: "CASL" 0.5;
+  --wght: "wght" 350;
+  --slnt: "slnt" 0;
+  --CRSV: "CRSV" 0;
+  font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
   -webkit-animation: fadeIn 0.667s;
           animation: fadeIn 0.667s;
-  font-family: 'Short Stack', system-ui;
+  font-family: "Recursive", "Monaco", "Inconsolata", monospace, system-ui;
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity));
 }
