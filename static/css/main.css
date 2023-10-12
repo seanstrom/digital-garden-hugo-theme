@@ -2026,12 +2026,14 @@ html.dark .image-container {
   border: none;
   padding: 20px;
   opacity: 0.9;
-  filter: hue-rotate(0deg) drop-shadow(0px 5px 30px white) grayscale(20%) contrast(100%);
+  --profile-image-drop-shadow-size: 30px;
+  --profile-image-hue-rotate: 0deg;
+  filter: hue-rotate(var(--profile-image-hue-rotate)) drop-shadow(0px 5px var(--profile-image-drop-shadow-size) white) grayscale(20%) contrast(100%);
 }
 
 html.dark .profile-img {
+  --profile-image-hue-rotate: 60deg;
   border-color: var(--dark-profile-border-color);
-  filter: hue-rotate(60deg) drop-shadow(0px 5px 30px white) grayscale(20%) contrast(100%);
   opacity: 0.9;
 }
 
@@ -2040,6 +2042,7 @@ html.dark .profile-img:hover {
 }
 
 .profile-img:hover {
+  --profile-image-drop-shadow-size: 34px;
   border-color: var(--light-profile-border-color-hover-alt);
 }
 
