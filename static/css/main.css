@@ -1826,23 +1826,50 @@ Ensure the default browser behavior of the `hidden` attribute.
   -webkit-line-clamp: 2;
 }
 
+:root {
+  --color-bg-dark-alt1: #27272a;
+  --color-bg-dark-alt2: #1c1917;
+  --color-bg-dark-alt3: #18181b;
+  --color-bg-light-print: white;
+  --core-font-emoji: "Noto Emoji";
+  --core-font-brush: "Caveat Brush", var(--core-font-emoji), system-ui;
+  --core-font-mono: "Recursive", "Monaco", "Inconsolata", monospace;
+  --core-font-body: var(--core-font-mono), system-ui;
+  --core-font-scribble: 'Nanum Pen Script', var(--core-font-emoji), Courier;
+  --recursive-mono: "MONO" 0.5;
+  --recursive-casl: "CASL" 0.5;
+  --recursive-wght: "wght" 350;
+  --recursive-slnt: "slnt" 0;
+  --recursive-crsv: "CRSV" 0;
+  --light-profile-background-image-url: url("/images/pastel.png");
+  --dark-profile-background-image-url: url("/images/pastel-darker.png");
+  --light-profile-border-color: #dfdfe1;
+  --light-profile-border-color-alt: #cbcbe6;
+  --dark-profile-border-color: #689cd0;
+  --light-profile-border-color-hover: #d2d2d2;
+  --light-profile-border-color-hover-alt: #d1d9fa;
+  --dark-profile-border-color-hover: #76b3f0;
+  --site-background-size: 20px;
+  --site-background-image-url: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABYSURBVHgB7c6xDYAwDETRgwmgTsNmzMAITApNlJJsEGyJgvrq/yTL5+osAQAAU2ttr7U+MVdmmSaZsjjW9p29lLLKMMu3/HKXyX5gjHHEurM88ikAAGB6AQVIHBYQiQI2AAAAAElFTkSuQmCC');
+  --dark-site-background-color: var(--color-bg-dark-alt1);
+}
+
 html {
   --tw-bg-opacity: 1;
   background-color: rgb(248 250 252 / var(--tw-bg-opacity));
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABYSURBVHgB7c6xDYAwDETRgwmgTsNmzMAITApNlJJsEGyJgvrq/yTL5+osAQAAU2ttr7U+MVdmmSaZsjjW9p29lLLKMMu3/HKXyX5gjHHEurM88ikAAGB6AQVIHBYQiQI2AAAAAElFTkSuQmCC');
-  background-size: 20px;
+  background-image: var(--site-background-image-url);
+  background-size: var(--site-background-size);
 }
 
 html.dark {
-  /* background-color: #18181b; */
-  background-color: #27272a;
-  /* background-color: #1c1917; */
-  background-color: #18181b;
+  background-color: var(--color-bg-dark-alt3);
   background-blend-mode: overlay;
 }
 
 html body {
-  background-color: rgba(0,0,0,0);
+  /* background-color: rgba(0,0,0,0); */
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
 }
 
 .dark html body {
@@ -1850,20 +1877,15 @@ html body {
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
 }
 
+html body {
+  --tw-bg-opacity: 0;
+}
+
 html.dark body {
   --tw-bg-opacity: 0.5;
 }
 
 body {
-  --mono: "MONO" 0.5;
-  --casl: "CASL" 0.5;
-  --wght: "wght" 350;
-  --slnt: "slnt" 0;
-  --CRSV: "CRSV" 0;
-  font-variation-settings: var(--mono), var(--casl), var(--wght), var(--slnt), var(--CRSV);
-  -webkit-animation: fadeIn 0.667s;
-          animation: fadeIn 0.667s;
-  font-family: "Recursive", "Monaco", "Inconsolata", monospace, system-ui;
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity));
 }
@@ -1898,6 +1920,18 @@ body {
   background-color: rgb(39 39 42 / var(--tw-bg-opacity));
 }
 
+body {
+  font-variation-settings: 
+    var(--recursive-mono), 
+    var(--recursive-casl),
+    var(--recursive-wght), 
+    var(--recursive-slnt), 
+    var(--recursive-crsv);
+  font-family: var(--core-font-body);
+  -webkit-animation: fadeIn 0.667s;
+          animation: fadeIn 0.667s;
+}
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -1919,26 +1953,29 @@ body {
 }
 
 article h1, article h2 {
-  font-family: "Caveat Brush", "Noto Emoji", system-ui;
+  font-family: var(--core-font-brush);
 }
 
 aside {
   font-size: 1.4rem;
-  font-family: "Caveat Brush", "Noto Emoji", system-ui;
+  font-family: var(--core-font-brush);
 }
 
 main section h2 {
-  font-family: "Caveat Brush", "Noto Emoji", system-ui;
+  font-family: var(--core-font-brush);
 }
 
 main > section > h3 {
-  font-family: 'Nanum Pen Script', 'Noto Emoji', Courier;
+  font-family: var(--core-font-scribble);
 }
 
 aside ul li span {
-  font-size: 1.4em;
-  line-height: 1.25em;
-  font-family: 'Nanum Pen Script', 'Noto Emoji', Courier;
+  /* font-size: 1.4em; */
+  /* line-height: 1.25em; */
+  /* font-family: var(--core-font-scribble); */
+  font-size: 1em;
+  line-height: 1.75em;
+  font-family: var(--core-font-body);
 }
 
 * {
@@ -1978,13 +2015,12 @@ html.dark * {
 html.dark .image-container {
   /* background-color: theme("colors.slate.900"); */
   /* background-blend-mode: color-dodge; */
-  background-image: url("/images/pastel-darker.png");
+  background-image: var(--dark-profile-background-image-url) ;
 }
 
 .profile-img {
   border-style: solid;
-  border-color: #dfdfe1;
-  border-color: #cbcbe6;
+  border-color: var(--light-profile-border-color-alt);
   margin-bottom: 0;
   margin-top: 0;
   border: none;
@@ -1994,18 +2030,17 @@ html.dark .image-container {
 }
 
 html.dark .profile-img {
-  border-color: #689cd0;
+  border-color: var(--dark-profile-border-color);
   filter: hue-rotate(60deg) drop-shadow(0px 5px 30px white) grayscale(20%) contrast(100%);
   opacity: 0.9;
 }
 
 html.dark .profile-img:hover {
-  border-color: #76b3f0;
+  border-color: var(--dark-profile-border-color-hover);
 }
 
 .profile-img:hover {
-  border-color: #d2d2d2;
-  border-color: #d1d9fa;
+  border-color: var(--light-profile-border-color-hover-alt);
 }
 
 .sidebar {
@@ -2090,7 +2125,7 @@ html.dark .profile-img:hover {
 }
 
 .image-container {
-  background-image: url("/images/pastel.png");
+  background-image: var(--light-profile-background-image-url);
   background-position: 50% 50%;
   background-size: 68%;
   background-repeat: no-repeat;
@@ -2099,26 +2134,27 @@ html.dark .profile-img:hover {
   position: relative;
 }
 
-.image-container:before {
-  content: " ";
-  position: absolute;
-  visibility: hidden;
-  background-image: url("/images/pastel-darker.png");
-}
-
+.image-container:before,
 .image-container:after {
   content: " ";
   position: absolute;
   visibility: hidden;
-  background-image: url("/images/pastel.png");
+}
+
+.image-container:before {
+  background-image: var(--dark-profile-background-image-url);
+}
+
+.image-container:after {
+  background-image: var(--light-profile-background-image-url);
 }
 
 .main-header {
-  font-family: "Caveat Brush", "Noto Emoji", system-ui;
+  font-family: var(--core-font-brush);
 }
 
 .main-subheader {
-  font-family: "Caveat Brush", 'Nanum Pen Script', "Noto Emoji", Courier;
+  font-family: var(--core-font-brush), var(--core-font-scribble);
 }
 
 .resume .main-subheader {
@@ -2170,7 +2206,7 @@ html .sidebar .social-links {
 
 @media print {
   html {
-    background-color: white!important;
+    background-color: var(--color-bg-light-print)!important;
   }
 
   #skills {
