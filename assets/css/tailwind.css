@@ -9,10 +9,10 @@
   --color-bg-light-print: white;
 
   --core-font-emoji: "Noto Emoji";
-  --core-font-brush: "Caveat Brush", var(--core-font-emoji), system-ui;
+  --core-font-brush: var(--core-font-emoji), "Caveat Brush", sans-serif; 
   --core-font-mono: "Recursive", "Monaco", "Inconsolata", monospace;
-  --core-font-body: var(--core-font-mono), system-ui;
-  --core-font-scribble: 'Nanum Pen Script', var(--core-font-emoji), Courier;
+  --core-font-body: var(--core-font-mono), sans-serif;
+  --core-font-scribble: var(--core-font-emoji), 'Nanum Pen Script', Courier, serif;
 
   --recursive-mono: "MONO" 0.5;
   --recursive-casl: "CASL" 0.5;
