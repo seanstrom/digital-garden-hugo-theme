@@ -246,6 +246,15 @@ html.dark .profile-img:hover {
   font-family: var(--core-font-brush), var(--core-font-scribble);
 }
 
+.resume .prose {
+  max-width: 74ch;
+}
+
+.resume > article {
+  padding-left: 3rem!important;
+  padding-right: 3rem!important;
+}
+
 .resume .main-subheader {
   margin-top: 2rem;
 }
@@ -292,6 +301,11 @@ html .sidebar .social-links {
   #skills {
     page-break-before: always;
   }
+  
+  #highlights,
+  #highlights + ul > li:nth-of-type(1) > ul > li:nth-of-type(2) {
+    page-break-before: always;
+  }
 
   .resume article,
   .site-container > div.px-6 {
@@ -316,5 +330,9 @@ html .sidebar .social-links {
 
   .bottom-divider {
     display: none;
+  }
+
+  .bottom-divider + p {
+    visibility: hidden;
   }
 }
