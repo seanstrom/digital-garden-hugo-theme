@@ -1,23 +1,23 @@
 {{ define "main" }}
 {{ $description := .Description }}
 
-<main class="site-container">
+<main class="site-container projects">
   <section class="w-full md:max-w-xl xl:max-w-4xl 2xl:max-w-7xl mx-auto flex flex-col px-6 py-20">
     <a href="{{ .Permalink }}" class="inline-block">
-      <h2 class="font-medium text-5xl px-5 mb-2 inline-block">
+      <h2 class="font-normal text-5xl px-5 mb-2 inline-block">
         {{ .Title }}
       </h2>
     </a>
 
     {{ if $description }}
-      <h3 class="px-5 py-4 text-2xl font-medium !leading-tight content-center">
+      <h3 class="px-5 py-4 text-2xl font-light !leading-tight content-center">
         {{ $description }}
       </h3>
     {{ end }}
 
     <div class="space-y-0 grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4">
       {{ range $index, $page := .Data.Pages -}}
-        <a class="block px-3 py-4 row-span-2" href="{{ .RelPermalink }}">
+        <a class="block p-2 row-span-2" href="{{ .RelPermalink }}">
           {{ $title := .Params.title }}
 
           {{ with .Params.images }}

@@ -10,7 +10,7 @@
     <a href="{{ $Section.Permalink }}" class="px-2 !no-underline !text-slate-500 !mb-2 !inline-block !font-normal !text-sm hover:!text-slate-700 dark:hover:!text-slate-400">← Back to list</a>
 
     {{ $title := .Params.title }}
-    <h1 class="px-2 text-5xl font-medium !mb-2">{{ $title }}</h1>
+    <h1 class="px-2 text-5xl font-normal !mb-2">{{ $title }}</h1>
 
     {{ if .Date }}
       <p class="px-2 text-sm text-slate-500 !mb-8">{{ .Date.Format "January 2, 2006" }}</p>
