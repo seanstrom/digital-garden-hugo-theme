@@ -884,10 +884,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
 }
 
-.left-\[5px\] {
-  left: 5px;
-}
-
 .top-0 {
   top: 0px;
 }
@@ -1003,10 +999,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   aspect-ratio: 16 / 9;
 }
 
-.h-\[100\%\] {
-  height: 100%;
-}
-
 .h-full {
   height: 100%;
 }
@@ -1033,10 +1025,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-height: 100vh;
 }
 
-.w-\[100\%\] {
-  width: 100%;
-}
-
 .w-full {
   width: 100%;
 }
@@ -1053,12 +1041,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 100%;
 }
 
-.flex-1 {
-  flex: 1 1 0%;
-}
-
 .flex-auto {
   flex: 1 1 auto;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 .shrink {
@@ -1481,10 +1469,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .underline-offset-8 {
   text-underline-offset: 8px;
-}
-
-.opacity-\[0\.9\] {
-  opacity: 0.9;
 }
 
 .transition-transform {
@@ -2590,7 +2574,7 @@ html.dark .profile-img:hover {
   --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
 }
 
-.image-container {
+.profile-image {
   background-image: var(--light-profile-background-image-url);
   background-position: 50% 50%;
   background-size: 78%;
@@ -2599,7 +2583,7 @@ html.dark .profile-img:hover {
   padding-bottom: 2em;
 }
 
-.image-container:first-child {
+.profile-image-background {
   filter: opacity(0.7);
 }
 
@@ -2608,12 +2592,12 @@ html.dark .profile-img:hover {
     padding: 30px;
   }
 
-  .image-container {
+  .profile-image {
     background-size: 68%;
   }
 }
 
-html.dark .image-container:first-child {
+html.dark .profile-image-background {
   /* filter: saturate(9) contrast(0.9) hue-rotate(58deg) brightness(0.9);
   filter: saturate(30) contrast(0.9) hue-rotate(57deg) brightness(0.7) opacity(1);
   filter: saturate(30) contrast(0.9) hue-rotate(48deg) brightness(0.8) opacity(1);
@@ -2621,7 +2605,7 @@ html.dark .image-container:first-child {
   filter: saturate(10) contrast(0.7) hue-rotate(42deg) brightness(0.3) opacity(1);
 }
 
-html.dark .image-container:last-child {
+html.dark .profile-image-foreground {
   /* filter: saturate(9) brightness(1) hue-rotate(58deg);
   filter: saturate(5) brightness(0.8) hue-rotate(8deg) opacity(1) contrast(1.6);
   filter: saturate(5) brightness(0.8) hue-rotate(8deg) opacity(0.8) contrast(1.6);
@@ -2638,18 +2622,18 @@ html.dark .profile-img {
   filter: hue-rotate(var(--profile-image-hue-rotate)) drop-shadow(0px 5px var(--profile-image-drop-shadow-size) white) grayscale(65%) contrast(100%) saturate(0.25) brightness(1) opacity(0.9);
 }
 
-.image-container:before,
-.image-container:after {
+.profile-image:before,
+.profile-image:after {
   content: " ";
   position: absolute;
   visibility: hidden;
 }
 
-.image-container:before {
+.profile-image:before {
   background-image: var(--dark-profile-background-image-url);
 }
 
-.image-container:after {
+.profile-image:after {
   background-image: var(--light-profile-background-image-url);
 }
 
@@ -2695,6 +2679,19 @@ html.dark .main-subheader, html.dark .main-subheader-red, html.dark .main-subhea
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
+}
+
+.profile-image-background {
+  position: relative;
+  left: 5px;
+  flex: 1 1 0%;
+}
+
+.profile-image-foreground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
 }
 
 .text-shadow {
