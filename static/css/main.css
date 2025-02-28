@@ -1983,6 +1983,7 @@ summary::-webkit-details-marker {
 }
 
 summary::before {
+  visibility: hidden;
   content: ' ';
   display: flex;
   flex-direction: column;

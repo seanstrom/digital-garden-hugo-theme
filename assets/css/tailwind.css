@@ -114,6 +114,7 @@ summary::-webkit-details-marker {
   display: none
 }
 summary::before {
+  visibility: hidden;
   content: ' ';
   display: flex;
   flex-direction: column;
