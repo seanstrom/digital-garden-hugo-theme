@@ -1,27 +1,38 @@
-
 <head>
   <meta charset="utf-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-  <link rel="icon" href="{{ if (isset .Site.Params "favicon") }}{{ .Site.Params.favicon }}{{ else }}/favicon.ico{{ end }}">
+  {{ $favicon := "/favicon.ico" }}
+  {{- if (isset .Site.Params "favicon") }}
+    {{ $favicon = .Site.Params.favicon }}
+  {{ end -}}
+  <link rel="icon" href="{{ $favicon }}">
 
-  <title>
-    {{ block "title" . }} {{- .Title }} - {{ .Site.Title -}} {{ end }}
-  </title>
+  <title>{{ block "title" . }}{{- .Title }} - {{ .Site.Title -}}{{ end }}</title>
 
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}" />
-  
+  {{ $description := "" }}
+  {{ with .Description }}
+    {{ $description = . }}
+  {{ else }}
+    {{if .IsPage}}
+      {{ $description = .Summary }}
+    {{ else }}
+      {{ with .Site.Params.description }}
+        {{ $description = . }}
+      {{ end }}
+    {{ end }}
+  {{ end -}}
+  <meta name="description" content="{{ $description }}" />
+
   {{- if .Keywords }}
   <meta name="keywords" content="{{ delimit .Keywords "," }}" />
   {{ end -}}
-  
+
   {{- if .Params.Author }}
-  <meta name="author" content="{{ .Params.Author}}" />
+    {{ $author := .Params.Author }}
+    <meta name="author" content="{{ $author }}" />
   {{ end -}}
   
-  {{ hugo.Generator }}
-
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 
@@ -33,35 +44,6 @@
   <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">   -->
 
   <link rel="stylesheet" href="{{ "/css/main.css" }}" />
-
-  <!-- Katex support -->
-  {{ if .Params.math }}
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css"
-      integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv"
-      crossorigin="anonymous"
-    >
-
-    <script defer
-      src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js"
-      integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O"
-      crossorigin="anonymous"
-    ></script>
-
-    <script defer
-      src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js"
-      integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF"
-      crossorigin="anonymous"
-      onload="renderMathInElement(document.body);"
-    ></script>
-  {{ end }}
-
-  {{ template "_internal/opengraph.html" . }}
-
-  {{ template "_internal/twitter_cards.html" . }}
-
-  {{ template "_internal/schema.html" . }}
 
   {{ template "_internal/schema.html" . }}
 </head>
