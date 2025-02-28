@@ -281,6 +281,11 @@ html.dark .profile-img:hover {
   @apply flex-1 overflow-y-auto;
 }
 
+.site-content {
+  @apply px-6 py-20 mx-auto h-fit w-full lg:w-[740px];
+  @apply prose prose-lg dark:prose-invert prose-img:mx-auto;
+}
+
 .image-container {
   background-image: var(--light-profile-background-image-url);
   background-position: 50% 50%;
@@ -348,7 +353,7 @@ html.dark .profile-img {
 }
 
 .main-header {
-  @apply font-serif;
+  @apply font-serif font-light text-center;
   font-family: var(--core-font-serif);
   font-variation-settings: initial;
   --color-text-shadow: var(--color-text-shadow-default-light);
@@ -361,11 +366,15 @@ html.dark .main-header {
 }
 
 .main-subheader {
-  @apply font-serif;
+  @apply font-serif font-light text-shadow text-center;
   font-variation-settings: initial;
   font-family: var(--core-font-serif);
   margin-top: 0.8333333em;
   margin-bottom: 0.8333333em;
+}
+
+.profile-images {
+  @apply flex relative justify-center mb-[20px];
 }
 
 .text-shadow {
@@ -445,7 +454,7 @@ html.dark .text-shadow-green {
   --tw-bg-opacity: 0.8;
   --tw-border-opacity: 0.8;
   border-width: 2px;
-  border-radius: 0.875rem;
+  border-radius: calc(5rem / 3);
 }
 
 html .sidebar .navigation {
