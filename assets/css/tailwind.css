@@ -239,6 +239,44 @@ html.dark .profile-img:hover {
   border-right-width: 3px;
 }
 
+.sidebar-menu {
+  @apply list-none flex flex-col gap-[0.1rem] rounded-md bg-[#EBEDF0] dark:bg-zinc-800;
+}
+
+.sidebar-menu-link {
+  @apply px-2 py-3 md:py-1.5 rounded text-sm flex items-center justify-center md:justify-between text-center;
+
+  &.active {
+    @apply bg-zinc-800 text-white dark:bg-[#EBEDF0] dark:text-slate-800 dark:selection:bg-slate-400;
+  }
+
+  &.inactive {
+    @apply bg-[#EBEDF0] hover:bg-slate-200 hover:bg-[#E8EAEC] dark:hover:bg-zinc-700 dark:hover:bg-zinc-700 dark:bg-zinc-800;
+  }
+}
+
+.sidebar-navigation {
+  @apply flex flex-col sticky pt-3 top-0;
+}
+
+.sidebar-controls {
+  @apply font-bold mb-5 flex items-center gap-2 justify-between;
+}
+
+.sidebar-control {
+  @apply rounded;
+  @apply hover:bg-slate-200 dark:hover:bg-zinc-700;
+}
+
+.sidebar-control.close-sidebar {
+  @apply md:hidden;
+  @apply p-1 text-slate-800 dark:text-zinc-50;
+}
+
+.sidebar-control.dark-mode-toggle {
+  @apply p-2;
+}
+
 .sidebar .site-title {
   --recursive-mono: "MONO" 0;
   --recursive-casl: "CASL" 0.2;
@@ -256,6 +294,22 @@ html.dark .profile-img:hover {
 
 .sidebar .social-links {
   /* border-top-width: 2px; */
+}
+
+.social-links {
+  @apply list-none flex flex-wrap justify-center gap-1 pt-2 pb-2 sticky bg-[#EBEDF0] rounded-md bottom-[0.5rem] dark:bg-zinc-800;
+}
+
+.social-link {
+  @apply px-2 py-1.5 rounded-md text-sm block text-slate-800 dark:text-slate-50 hover:bg-slate-200 dark:hover:bg-zinc-700;
+}
+
+.menu-overlay {
+  @apply md:hidden;
+  @apply pointer-events-auto;
+  @apply fixed left-0 top-0 w-full h-full z-10;
+  @apply transition duration-200 ease-in-out;
+  @apply bg-slate-700 bg-opacity-5 inset-0;
 }
 
 .sidebar + .menu-overlay + .menu-trigger {
@@ -284,6 +338,14 @@ html.dark .profile-img:hover {
 .site-content {
   @apply px-6 py-20 mx-auto h-fit w-full lg:w-[740px];
   @apply prose prose-lg dark:prose-invert prose-img:mx-auto;
+}
+
+.site-body {
+  @apply flex relative h-full min-h-screen;
+}
+
+.site-main {
+  @apply flex-1;
 }
 
 .profile-image {
@@ -382,7 +444,7 @@ html.dark .main-header {
 }
 
 .profile-image-foreground {
-  @apply absolute w-[100%] h-[100%] opacity-[0.9];
+  @apply absolute w-[100%] h-[100%] opacity-[0.8];
 }
 
 .text-shadow {
@@ -462,7 +524,7 @@ html.dark .text-shadow-green {
   --tw-bg-opacity: 0.8;
   --tw-border-opacity: 0.8;
   border-width: 2px;
-  border-radius: calc(5rem / 3);
+  border-radius:  0.875rem;
 }
 
 html .sidebar .navigation {
@@ -472,6 +534,14 @@ html .sidebar .navigation {
 html .sidebar .navigation li a,
 html .sidebar .social-links {
   --tw-bg-opacity: 0.8;
+}
+
+.toggle-sidebar {
+  @apply md:hidden;
+  @apply absolute p-1 rounded top-3 left-4 z-10;
+   
+  @apply text-slate-800 dark:text-slate-50;
+  @apply hover:bg-slate-200 dark:hover:bg-zinc-700;
 }
 
 @media print {

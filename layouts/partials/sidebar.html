@@ -1,41 +1,31 @@
 <aside class="sidebar">
-  <div class="flex flex-col sticky pt-3 top-0">
-    <p class="font-bold mb-5 flex items-center gap-2 justify-between">
-      <button
-        aria-label="Close sidebar"
-        class="md:hidden menu-trigger-close p-1 rounded text-slate-800 dark:text-zinc-50 hover:bg-slate-200 dark:hover:bg-zinc-700">
+  <div class="sidebar-navigation">
+    <p class="sidebar-controls">
+      <button aria-label="Close sidebar" class="sidebar-control close-sidebar menu-trigger-close">
         {{- partial "icon/closeIcon.html" . -}}
       </button>
       <a href="/" class="px-2">
         <span class="site-title text-shadow">{{ .Site.Title }}</span>
       </a>
-      <button
-        aria-label="Toggle dark mode"
-        class="dark-mode-toggle p-2 rounded hover:bg-slate-200 dark:hover:bg-zinc-700">
+      <button aria-label="Toggle dark mode" class="sidebar-control dark-mode-toggle">
         {{- partial "icon/sunIcon.html" . -}}
       </button>
     </p>
 
     {{ $permalink := cond (eq (len .RelPermalink) 1) .RelPermalink (strings.TrimRight "/" .RelPermalink) }}
-    <ul class="navigation list-none flex flex-col gap-[0.1rem] rounded-md bg-[#EBEDF0] dark:bg-zinc-800">
+    <ul class="sidebar-menu navigation">
       {{ range .Site.Menus.main }}
+
+      {{ $activeClass := "" }}
+      {{- if eq .URL $permalink }}
+        {{ $activeClass = "active" }}
+      {{ else }}
+        {{ $activeClass = "inactive" }}
+      {{ end -}}
+
       <li>
-        <a class="px-2 py-3 md:py-1.5 rounded text-sm flex items-center justify-center md:justify-between text-center
-          {{ if eq .URL $permalink }}
-            bg-zinc-800
-            text-white 
-            dark:bg-[#EBEDF0] 
-            dark:text-slate-800 
-            dark:selection:bg-slate-400
-          {{ else }}
-            bg-[#EBEDF0] 
-            hover:bg-slate-200 
-            hover:bg-[#E8EAEC] 
-            dark:hover:bg-zinc-700 
-            dark:hover:bg-zinc-700 
-            dark:bg-zinc-800
-          {{ end }}"
-          href="{{ .URL }}" {{ if strings.HasPrefix .URL "http" }} target="_blank" rel="noopener" {{ end }}>
+        <a class="sidebar-menu-link {{ $activeClass }}" href="{{ .URL }}"
+          {{ if strings.HasPrefix .URL "http" }} target="_blank" rel="noopener" {{ end }}>
           <span>{{ .Name }}</span>
           {{ if strings.HasPrefix .URL "http" }}
             <span>
@@ -48,15 +38,10 @@
     </ul>
   </div>
 
-  {{ if .Site.Params.newsletter }}
-  {{- partial "newsletter-widget.html" . -}} 
-  {{ end }}
-
-  <ul class="social-links list-none flex flex-wrap justify-center gap-1 pt-2 pb-2 sticky bg-[#EBEDF0] rounded-md bottom-[0.5rem] dark:bg-zinc-800">
+  <ul class="social-links">
     {{ range .Site.Menus.social }}
     <li>
-      <a class="px-2 py-1.5 rounded-md text-sm block text-slate-800 dark:text-slate-50 {{ if eq (.URL|absURL) $permalink }} bg-slate-800 text-white dark: {{ else }} hover:bg-slate-200 dark:hover:bg-zinc-700 {{ end }}"
-        href="{{ .URL }}" target="_blank" rel="noopener noreferrer">
+      <a class="social-link" href="{{ .URL }}" target="_blank" rel="noopener noreferrer">
         <span class="sr-only">{{ .Name }}</span>
         {{ if eq .Name "Twitter" }}
         <span>{{- partial "icon/twitterIcon.html" . -}}</span>
@@ -83,12 +68,9 @@
   </ul>
 </aside>
 
-<div
-  class="fixed bg-slate-700 bg-opacity-5 transition duration-200 ease-in-out inset-0 z-10 pointer-events-auto md:hidden left-0 top-0 w-full h-full hidden menu-overlay">
+<div class="menu-overlay hidden">
 </div>
 
-<button
-  aria-label="Toggle Sidebar"
-  class="md:hidden absolute top-3 left-4 z-10 menu-trigger p-1 rounded text-slate-800 dark:text-slate-50 hover:bg-slate-200 dark:hover:bg-zinc-700">
+<button aria-label="Toggle Sidebar" class="toggle-sidebar menu-trigger">
   {{- partial "icon/menuIcon.html" . -}}
 </button>
