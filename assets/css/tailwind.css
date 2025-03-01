@@ -332,7 +332,7 @@ html.dark .profile-img:hover {
 }
 
 .site-container {
-  @apply flex-1 overflow-y-auto;
+  @apply flex-1 overflow-y-auto flex relative;
 }
 
 .site-content {
@@ -598,6 +598,39 @@ html.dark .text-shadow-green {
 
 .projects-layout {
   @apply space-y-0 grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4;
+}
+
+.project {
+  @apply px-6 py-20 w-full mx-auto prose lg:prose-lg dark:prose-invert h-fit prose-img:mx-auto;
+}
+
+.project-back-link {
+  @apply
+    px-2
+    !no-underline
+    !text-slate-500
+    !mb-2
+    !inline-block
+    !font-normal
+    !text-sm
+    hover:!text-slate-700
+    dark:hover:!text-slate-400;
+}
+
+.project-title {
+  @apply px-2 text-5xl font-normal !mb-2;
+}
+
+.project-date {
+  @apply px-2 text-sm text-slate-500 !mb-8;
+}
+
+.project-image {
+  @apply rounded-md aspect-video max-w-full w-full mb-4;
+}
+
+.project-content {
+  @apply px-2;
 }
 
 html .sidebar .navigation {
