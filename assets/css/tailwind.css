@@ -519,12 +519,85 @@ html.dark .text-shadow-green {
   margin-top: 1px;
 }
 
-.projects .block {
+.projects .project-item {
   @apply bg-slate-50 dark:bg-zinc-800 border-slate-200 dark:border-zinc-900;
   --tw-bg-opacity: 0.8;
   --tw-border-opacity: 0.8;
   border-width: 2px;
   border-radius:  0.875rem;
+}
+
+.project-item {
+  @apply block p-2 row-span-2;
+}
+
+.project-item-image {
+  @apply aspect-video rounded-md max-w-full w-full mb-4;
+}
+
+.project-item-title {
+  @apply px-2 text-lg font-semibold lg:text-xl 2xl:text-3xl;
+}
+
+.project-item-description {
+  @apply mt-1 px-2 text-sm text-slate-500 dark:text-slate-400 line-clamp-2;
+}
+
+.project-item-tags {
+  @apply mt-3 px-2;
+}
+
+.project-item-tag {
+  @apply 
+    py-1 
+    px-2 
+    mb-1  
+    inline-block 
+    leading-none 
+    text-center 
+    whitespace-nowrap 
+    align-baseline 
+    font-light
+    bg-[#6cc3c8]
+    bg-[#f7d6b4]
+    bg-[#80808045]
+    text-slate-800
+    dark:text-slate-200
+    rounded-full;
+}
+
+.project-item-link {
+  @apply 
+    px-2 
+    mt-3 
+    mb-1 
+    underline 
+    decoration-slate-500 
+    text-slate-900 
+    underline-offset-8 
+    font-medium 
+    hover:text-slate-500 
+    hover:decoration-slate-900 
+    dark:text-slate-200 
+    dark:decoration-slate-400 
+    dark:hover:text-slate-400 
+    dark:hover:decoration-slate-200;
+}
+
+.projects {
+  @apply w-full md:max-w-xl xl:max-w-4xl 2xl:max-w-7xl mx-auto flex flex-col px-6 py-20;
+}
+
+.projects-header {
+  @apply font-normal text-5xl px-5 mb-2 inline-block;
+}
+
+.projects-description {
+  @apply px-5 py-4 text-2xl font-light !leading-tight content-center;
+}
+
+.projects-layout {
+  @apply space-y-0 grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4;
 }
 
 html .sidebar .navigation {

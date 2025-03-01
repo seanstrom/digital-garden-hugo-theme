@@ -1,83 +1,50 @@
 {{ define "main" }}
 {{ $description := .Description }}
 
-<main class="site-container projects">
-  <section class="w-full md:max-w-xl xl:max-w-4xl 2xl:max-w-7xl mx-auto flex flex-col px-6 py-20">
+<main class="site-container">
+  <section class="projects">
     <a href="{{ .Permalink }}" class="inline-block">
-      <h2 class="font-normal text-5xl px-5 mb-2 inline-block">
+      <h2 class="projects-header">
         {{ .Title }}
       </h2>
     </a>
 
     {{ if $description }}
-      <h3 class="px-5 py-4 text-2xl font-light !leading-tight content-center">
+      <h3 class="projects-description">
         {{ $description }}
       </h3>
     {{ end }}
 
-    <div class="space-y-0 grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-4">
+    <div class="projects-layout">
       {{ range $index, $page := .Data.Pages -}}
-        <a class="block p-2 row-span-2" href="{{ .RelPermalink }}">
+        <a class="project-item" href="{{ .RelPermalink }}">
           {{ $title := .Params.title }}
 
           {{ with .Params.images }}
             {{- range first 1 . }}
-              <img class="aspect-video rounded-md max-w-full w-full mb-4" src="{{ . }}" alt="{{ $title }}" />
+              <img class="project-item-image" src="{{ . }}" alt="{{ $title }}" />
             {{ end -}}
           {{ end }}
 
-          <h3 class="px-2 text-lg font-semibold lg:text-xl 2xl:text-3xl">{{ $title }}</h3>
+          <h3 class="project-item-title">{{ $title }}</h3>
 
           {{ with .Description }}
-            <div class="mt-1 px-2 text-sm text-slate-500 dark:text-slate-400 line-clamp-2">
+            <div class="project-item-description">
               {{ . }}
             </div>
           {{ end }}
 
           {{ if .Params.tags }}
-            <ul class="mt-3 px-2">
+            <ul class="project-item-tags">
                 {{ range .Params.tags }}
-                  <span class="
-                    py-1 
-                    px-2 
-                    mb-1  
-                    inline-block 
-                    leading-none 
-                    text-center 
-                    whitespace-nowrap 
-                    align-baseline 
-                    font-light
-                    bg-[#6cc3c8]
-                    bg-[#f7d6b4]
-                    bg-[#80808045]
-                    dark:bg=[#333]
-                    text-slate-800
-                    dark:text-slate-200
-                    rounded-full
-                  ">
+                  <span class="project-item-tag">
                     {{ . }}
                   </span>
                 {{ end }}
             </ul>
           {{ end }}
 
-
-          <p
-            class="
-              px-2 
-              mt-3 
-              mb-1 
-              underline 
-              decoration-slate-500 
-              text-slate-900 
-              underline-offset-8 
-              font-medium 
-              hover:text-slate-500 
-              hover:decoration-slate-900 
-              dark:text-slate-200 
-              dark:decoration-slate-400 
-              dark:hover:text-slate-400 
-              dark:hover:decoration-slate-200">
+          <p class="project-item-link">
               View Project →
           </p>
         </a>
