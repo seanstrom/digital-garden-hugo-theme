@@ -490,16 +490,32 @@ html.dark .text-shadow-green {
   --color-text-shadow: var(--color-text-shadow-green-dark);
 }
 
-.resume .prose {
+.resume {
+  @apply px-6 py-20 w-full mx-auto prose lg:prose-lg dark:prose-invert h-fit prose-img:mx-auto;
+}
+
+.resume-header {
+  @apply px-2 text-5xl font-medium !mb-2;
+}
+
+.resume-subheader {
+  @apply px-2 text-2xl font-medium !leading-tight content-center;
+}
+
+.resume-content {
+  @apply px-2;
+}
+
+.resume-container .prose {
   max-width: 74ch;
 }
 
-.resume > article {
+.resume-container > article {
   padding-left: 3rem!important;
   padding-right: 3rem!important;
 }
 
-.resume .main-subheader {
+.resume-container .main-subheader {
   margin-top: 2rem;
 }
 
@@ -664,7 +680,7 @@ html .sidebar .social-links {
     page-break-before: always;
   }
 
-  .resume article,
+  .resume-container article,
   .site-container > div.px-6 {
     padding-left: 3rem!important;
     padding-right: 3rem!important;

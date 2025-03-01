@@ -3,28 +3,20 @@
 {{ $permalink := .RelPermalink }}
 {{$Section := .Site.GetPage "section" .Section }}
 
-<div class="resume site-container flex relative">
-  
-  <article class="px-6 py-20 w-full mx-auto prose lg:prose-lg dark:prose-invert h-fit prose-img:mx-auto">
+<div class="resume-container site-container">
+  <article class="resume">
     
     {{ $title := .Params.title }}
-    <h1 class="main-header px-2 text-5xl font-medium !mb-2">{{ $title }}</h1>
+    <h1 class="main-header resume-header">{{ $title }}</h1>
 
     {{ $desc := .Params.description }}
-    <h2 class="main-subheader px-2 text-2xl font-medium !leading-tight content-center">{{ $desc }}</h2>
+    <h2 class="main-subheader resume-subheader">{{ $desc }}</h2>
 
-    {{ with .Params.images }}
-      {{- range first 1 . }}
-        <img class="rounded-md aspect-video max-w-full w-full mb-4" src="{{ . }}" alt="{{ $title }}" />
-      {{ end -}}
-    {{ end }}
-
-    <section class="px-2">
+    <section class="resume-content">
       {{ .Content }}
     </section>
 
   </article>
-
 </div>
 
 {{ end }}
